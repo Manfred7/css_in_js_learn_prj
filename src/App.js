@@ -1,9 +1,25 @@
 import {ButtonColorKind, ButtonSize, ButtonVariant, StyledButton} from "./elements/button";
+import {GlobalResets} from "./utils/globalResets";
+import {GlobalFonts} from "./utils/globalFonts";
+import {GlobalColors} from "./utils/globalColors";
+import {GlobalGradients} from "./utils/globalGradients";
+import {GlobalShadows} from "./utils/globalShadows";
 
 
 function App() {
     return (
         <div className="App">
+            <GlobalResets/>
+            <GlobalFonts/>
+            <GlobalColors/>
+            <GlobalGradients/>
+            <GlobalShadows/>
+            {/*<ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>*/}
+
             <div>
                 <StyledButton size={ButtonSize.MEDIUM}
                               variant={ButtonVariant.FILLED}

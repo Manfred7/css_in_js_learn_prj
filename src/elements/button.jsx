@@ -28,12 +28,12 @@ export const ButtonColorKind = {
 }
 const ButtonSizeToCSS = {
     [ButtonSize.MEDIUM]: css`
-      padding: 4px 8px;
+      padding:  0 4px 2px;
       font-size: 14px;
       line-height: 20px;
     `,
     [ButtonSize.LARGE]: css`
-      padding: 8px 16px;
+      padding: 2px 6px 4px;
       font-size: 16px;
       line-height: 22px;
     `
