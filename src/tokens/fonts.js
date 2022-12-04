@@ -36,6 +36,6 @@ export const GlobalFonts = createGlobalStyle`
 
   :root {    
     --font-commissionere: 'Commissionere', Arial, sans-serif;
-    --font-gothic: 'gothic', Arial, sans-serif;
+    --font-gothic: 'gothic', var(--font-commissioner);
   }
 `;

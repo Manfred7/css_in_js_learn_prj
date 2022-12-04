@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {Font} from "./fonts";
+import {Color} from "./сolors";
 
 export const GlobalResets = createGlobalStyle`
   * {
@@ -16,7 +17,9 @@ export const GlobalResets = createGlobalStyle`
   }
 
   body {
-    font-family: ${Font.COMMISSIONER}    
+    font-family: ${Font.COMMISSIONER}
+    font-weight: 400;
+    background-color: ${Color.GRAY_50};
   }
 
   button,
