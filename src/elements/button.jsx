@@ -7,6 +7,8 @@
 
 */
 import styled, {css} from 'styled-components';
+import {Radius} from "../tokens/radiuses";
+import {Color} from "../tokens/сolors";
 
 const CursorVariants = {
     POINTER: 'pointer',
@@ -28,7 +30,7 @@ export const ButtonColorKind = {
 }
 const ButtonSizeToCSS = {
     [ButtonSize.MEDIUM]: css`
-      padding:  0 4px 2px;
+      padding: 0 4px 2px;
       font-size: 14px;
       line-height: 20px;
     `,
@@ -48,16 +50,16 @@ export const ButtonDetailColorTypes = {
 
 const ButtonColors = {
     [ButtonColorKind.GREEN]: {
-        [ButtonDetailColorTypes.COLOR]: `#5FCB45`,
-        [ButtonDetailColorTypes.HOVER_OR_FOCUS]: `#86DA71`,
-        [ButtonDetailColorTypes.ACTIVE]: `#42B026`,
-        [ButtonDetailColorTypes.DISABLED]: `#ADADAD`
+        [ButtonDetailColorTypes.COLOR]: `${Color.GREEN_30}`,
+        [ButtonDetailColorTypes.HOVER_OR_FOCUS]: `${Color.GREEN_20}`,
+        [ButtonDetailColorTypes.ACTIVE]: `${Color.GREEN_40}`,
+        [ButtonDetailColorTypes.DISABLED]: `${Color.GRAY_30}`
     },
     [ButtonColorKind.ORANGE]: {
-        [ButtonDetailColorTypes.COLOR]: `#FF833E`,
-        [ButtonDetailColorTypes.HOVER_OR_FOCUS]: `#FF9F69`,
-        [ButtonDetailColorTypes.ACTIVE]: `#F06314`,
-        [ButtonDetailColorTypes.DISABLED]: `#ADADAD`
+        [ButtonDetailColorTypes.COLOR]: `${Color.ORANGE_30}`,
+        [ButtonDetailColorTypes.HOVER_OR_FOCUS]: `${Color.ORANGE_20}`,
+        [ButtonDetailColorTypes.ACTIVE]: `${Color.ORANGE_40}`,
+        [ButtonDetailColorTypes.DISABLED]: `${Color.GRAY_30}`
     }
 };
 
@@ -70,7 +72,7 @@ export const StyledButton = styled.button.attrs((props) => ({
 }))`
 
   cursor: ${CursorVariants.POINTER};
-  border-radius: 4px;
+  border-radius: ${Radius.RADIUS_4};
 
   ${({size}) => ButtonSizeToCSS[size]}
   ${({color, variant}) => {
@@ -80,7 +82,7 @@ export const StyledButton = styled.button.attrs((props) => ({
         return ({
           border: "none",
           "background-color": ButtonColors[color].COLOR,
-          color: "white"
+          color: `${Color.WHITE}`
 
         })
       }

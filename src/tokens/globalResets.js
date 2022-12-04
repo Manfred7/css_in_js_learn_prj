@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {Font} from "./globalFonts";
+import {Font} from "./fonts";
 
 export const GlobalResets = createGlobalStyle`
   * {
@@ -16,9 +16,7 @@ export const GlobalResets = createGlobalStyle`
   }
 
   body {
-    /*font-family: Arial, sans-serif;*/
-/*/!*    font-family: ${Font.MANROPE};
-    font-weight: 500;*!/*/
+    font-family: ${Font.COMMISSIONER}    
   }
 
   button,
